@@ -1,0 +1,11 @@
+apiVersion: rabbitmq.com/v1beta1
+kind: Exchange
+metadata:
+  name: orders-exchange
+  namespace: default
+spec:
+  name: orders
+  type: direct
+  durable: true
+  rabbitmqClusterReference:
+    name: my-rabbitmq

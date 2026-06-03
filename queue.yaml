@@ -1,0 +1,10 @@
+apiVersion: rabbitmq.com/v1beta1
+kind: Queue
+metadata:
+  name: orders-queue
+  namespace: default
+spec:
+  name: order-events
+  durable: true
+  rabbitmqClusterReference:
+    name: my-rabbitmq
