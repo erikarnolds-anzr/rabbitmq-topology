@@ -8,4 +8,4 @@ spec:
   type: direct
   durable: true
   rabbitmqClusterReference:
-    name: my-rabbitmq
+    name: rabbitmq

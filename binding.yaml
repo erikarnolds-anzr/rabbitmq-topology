@@ -9,4 +9,4 @@ spec:
   destinationType: queue
   routingKey: "new-order"
   rabbitmqClusterReference:
-    name: my-rabbitmq
+    name: rabbitmq

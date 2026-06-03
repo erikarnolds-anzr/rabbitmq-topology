@@ -7,4 +7,4 @@ spec:
   name: order-events
   durable: true
   rabbitmqClusterReference:
-    name: my-rabbitmq
+    name: rabbitmq
