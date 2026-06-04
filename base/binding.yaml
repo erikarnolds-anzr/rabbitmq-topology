@@ -1,0 +1,25 @@
+apiVersion: rabbitmq.com/v1beta1
+kind: Binding
+metadata:
+  name: email-binding
+  namespace: default
+spec:
+  source: notifications
+  destination: email-queue
+  destinationType: queue
+  routingKey: "email"
+  rabbitmqClusterReference:
+    name: rabbitmq
+---
+apiVersion: rabbitmq.com/v1beta1
+kind: Binding
+metadata:
+  name: push-binding
+  namespace: default
+spec:
+  source: notifications
+  destination: push-queue
+  destinationType: queue
+  routingKey: "push"
+  rabbitmqClusterReference:
+    name: rabbitmq

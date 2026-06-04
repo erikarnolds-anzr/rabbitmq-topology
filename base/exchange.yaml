@@ -1,10 +1,10 @@
 apiVersion: rabbitmq.com/v1beta1
 kind: Exchange
 metadata:
-  name: orders-exchange
+  name: notifications-exchange
   namespace: default
 spec:
-  name: orders
+  name: notifications
   type: direct
   durable: true
   rabbitmqClusterReference:

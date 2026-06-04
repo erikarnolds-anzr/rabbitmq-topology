@@ -1,0 +1,21 @@
+apiVersion: rabbitmq.com/v1beta1
+kind: Queue
+metadata:
+  name: email-queue
+  namespace: default
+spec:
+  name: email-queue
+  durable: true
+  rabbitmqClusterReference:
+    name: rabbitmq
+---
+apiVersion: rabbitmq.com/v1beta1
+kind: Queue
+metadata:
+  name: push-queue
+  namespace: default
+spec:
+  name: push-queue
+  durable: true
+  rabbitmqClusterReference:
+    name: rabbitmq
